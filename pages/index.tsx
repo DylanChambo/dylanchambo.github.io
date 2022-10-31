@@ -8,12 +8,11 @@ export default function Home() {
     <div>
       <Head>
         <title>Dylan's Portolio</title>
-        <meta name="description" content="Dylan Chamberlains Portfolio website" />
+        <meta name="description" content="Dylan Chamberlain's Portfolio website" />
         <meta name="author" content="Dylan Chamberlain" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* TODO: Header */}
       <Header />
 
       {/* TODO: Hero */}
