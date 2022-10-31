@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.snap}>
       <Head>
         <title>Dylan's Portolio</title>
         <meta name="description" content="Dylan Chamberlain's Portfolio website" />
@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
 
       {/* TODO: Hero */}
-      <section id="hero">
+      <section className={styles.snapItem} id="hero">
         <Hero />
       </section>
 

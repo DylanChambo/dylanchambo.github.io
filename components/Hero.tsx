@@ -1,5 +1,8 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import BackgroundCircles from "./BackgroundCircles";
+import styles from "./Hero.module.scss";
+
 
 type Props = {}
 
@@ -14,7 +17,8 @@ export default function Hero({}: Props) {
     });
 
     return (
-        <div>
+        <div className={styles.container}>
+            <BackgroundCircles />
             <h1>
                 <span>{text}</span>
                 <Cursor cursorColor="#F7AB0A"/>

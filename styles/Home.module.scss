@@ -1,1 +1,11 @@
+.snap {
+    scroll-snap-type: y var(--tw-scroll-snap-strictness);
+    --tw-scroll-snap-strictness: mandatory;
+    z-index: 0;
+    overflow-y: scroll;
+    height: 100vh;
+}
 
+.snapItem {
+    scroll-snap-align: center;
+}

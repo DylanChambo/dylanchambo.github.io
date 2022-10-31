@@ -1,0 +1,63 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    border: 1px solid #202020;
+    border-radius: 9999px;
+    margin-top: 3.25rem;
+}
+
+.circle1 {
+    height: 10rem;
+    width: 10rem;
+}
+
+.circle2 {
+    height: 20rem;
+    width: 20rem;
+}
+
+.circle3 {
+    height: 30rem;
+    width: 30rem;
+}
+
+.circle4 {
+    height: 40rem;
+    width: 40rem;
+    border: 1px solid #F7AB0A;
+}
+
+.circle5 {
+    height: 50rem;
+    width: 50rem;
+}
+
+.ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+    @keyframes ping {
+        75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+}
+
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 0.5;
+        }
+        50% {
+            opacity: 0.25;
+        }
+    }
+}
