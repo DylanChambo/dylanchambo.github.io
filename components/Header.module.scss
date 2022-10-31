@@ -1,0 +1,47 @@
+$fgColor: gray;
+$bgColor: transparent;
+
+.header {
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: sticky;
+    max-width: 80rem;
+    margin: 0.5rem auto;
+    z-index: 20;
+    padding: 0.1rem 0.7rem;
+}
+
+.headerPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.email {
+    color: $fgColor;
+    font-weight: 300;
+}
+
+.email:hover {
+    cursor: pointer;
+}
+
+.text {
+    display: none;
+    text-transform: uppercase;
+    color: $fgColor;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 48rem) {
+    .text {
+        display: inline-flex;
+    }
+}
+
+:export {
+    fgColor: $fgColor;
+    bgColor: $bgColor;
+}
