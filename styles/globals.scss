@@ -1,3 +1,6 @@
+$backgroundColor: rgb(20,20,20);
+$textColor: white;
+
 html,
 body {
   padding: 0;
@@ -20,7 +23,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: $textColor;
+    background: $backgroundColor;
   }
 }
