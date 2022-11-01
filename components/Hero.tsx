@@ -19,10 +19,17 @@ export default function Hero({}: Props) {
     return (
         <div className={styles.container}>
             <BackgroundCircles />
-            <h1>
-                <span>{text}</span>
-                <Cursor cursorColor="#F7AB0A"/>
-            </h1>
+            <img 
+                className={styles.image}
+                src="dylan.png"
+                alt=""
+            />
+            <div className={styles.text}>
+                <h1>
+                    <span>{text}</span>
+                    <Cursor cursorColor="#F7AB0A"/>
+                </h1>
+            </div>
         </div>
     )
 }
