@@ -14,9 +14,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* Header */}
       <Header />
 
-      {/* TODO: Hero */}
+      {/* Hero */}
       <section className={styles.snapItem} id="hero">
         <Hero />
       </section>
