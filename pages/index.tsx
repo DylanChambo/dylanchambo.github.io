@@ -18,12 +18,12 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <section className={styles.snapItem} id="hero">
+      <section className={styles.snapCenter} id="hero">
         <Hero />
       </section>
 
       {/* TODO: About */}
-      <section className={styles.snapItem} id="about">
+      <section className={styles.snapStart} id="about">
         <About />
       </section>
 

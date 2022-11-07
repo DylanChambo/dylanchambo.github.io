@@ -7,6 +7,10 @@
     height: 100vh;
 }
 
-.snapItem {
+.snapCenter {
     scroll-snap-align: center;
+}
+
+.snapStart {
+    scroll-snap-align: start;
 }
