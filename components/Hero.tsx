@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
-import styles from "./Hero.module.scss";
+import styles from "../styles/Hero.module.scss";
 
 
 type Props = {}

@@ -1,5 +1,5 @@
 // @ts-ignore
-import styles, { bgColor, fgColor } from './Header.module.scss';
+import styles, { bgColor, fgColor } from "../styles/Header.module.scss";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 

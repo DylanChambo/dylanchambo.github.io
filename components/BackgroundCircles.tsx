@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./BackgroundCircles.module.scss";
+import styles from "../styles/BackgroundCircles.module.scss";
 import { motion } from "framer-motion";
 
 type Props = {}
