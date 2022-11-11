@@ -14,39 +14,43 @@ export default function Hero({}: Props) {
             "I study Engineering at the University of Auckland.",
         ],
         loop: true,
-        delaySpeed: 2000,
+        delaySpeed: 3000,
+        typeSpeed: 100,
     });
 
     return (
-        <div className={styles.container}>
-            <BackgroundCircles />
-            <img 
-                className={styles.image}
-                src="dylan.png"
-                alt=""
-            />
-            <div className={styles.text}>
-                <h2 className={styles.subheader}>Software & Computer Engineer</h2>
-                <h1>
-                    <span>{text}</span>
-                    <Cursor cursorColor="#F7AB0A"/>
-                </h1>
+        <div>
+            <div className={styles.container}>
+                <BackgroundCircles />
+                <img 
+                    className={styles.image}
+                    src="dylan.png"
+                    alt=""
+                />
+                <div className={styles.text}>
+                    <h2 className={styles.subheader}>Software & Computer Engineer</h2>
+                    <h1>
+                        <span>{text}</span>
+                        <Cursor cursorColor="#F7AB0A"/>
+                    </h1>
 
-                <div>
-                    <Link href="#about">
-                        <button className={styles.button}>About</button>
-                    </Link>
-                    <Link href="#experience">
-                        <button className={styles.button}>Experience</button>
-                    </Link>
-                    <Link href="#skills">
-                        <button className={styles.button}>Skills</button>
-                    </Link>
-                    <Link href="#projects">
-                        <button className={styles.button}>Projects</button>
-                    </Link>
+                    <div>
+                        <Link href="#about">
+                            <button className={styles.button}>About</button>
+                        </Link>
+                        <Link href="#experience">
+                            <button className={styles.button}>Experience</button>
+                        </Link>
+                        <Link href="#skills">
+                            <button className={styles.button}>Skills</button>
+                        </Link>
+                        <Link href="#projects">
+                            <button className={styles.button}>Projects</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
+            <div className={styles.spacer}></div>
         </div>
     )
 }
