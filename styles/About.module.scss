@@ -1,0 +1,33 @@
+.container {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    max-width: 80rem;
+    padding: 0 2.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.title {
+    position: absolute;
+    top: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.7rem;
+    color: gray;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.image {
+    
+}
+
+@media screen and (min-width: 48rem) {
+    .container {
+        text-align: left;
+        flex-direction: row;
+    }
+}
