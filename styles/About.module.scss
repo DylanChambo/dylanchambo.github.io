@@ -4,9 +4,9 @@
     position: relative;
     flex-direction: column;
     text-align: center;
-    max-width: 80rem;
+    max-width: 75rem;
     padding: 0 2.5rem;
-    justify-content: space-evenly;
+    justify-content:center;
     align-items: center;
     margin: 0 auto;
 }
@@ -30,6 +30,20 @@
     object-fit: cover;
 }
 
+.subheader {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+.textContainer {
+    margin-top: 1rem;
+    padding: 0 0;
+}
+
+.text {
+    font-size: 1rem;
+}
+
 @media screen and (min-width: 48rem) {
     .container {
         text-align: left;
@@ -39,8 +53,12 @@
     .image {
         margin-bottom: 0;
         border-radius: 1rem;
-        width: 16rem;
-        height: 16rem;
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .textContainer {
+        padding: 1.5rem;
     }
 }
 
