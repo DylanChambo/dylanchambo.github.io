@@ -3,6 +3,7 @@ import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import styles from "../styles/Hero.module.scss";
+import Image from "next/image";
 
 
 type Props = {}
@@ -22,9 +23,11 @@ export default function Hero({}: Props) {
         <div>
             <div className={styles.container}>
                 <BackgroundCircles />
-                <img 
+                <Image
+                    width={1000}
+                    height={1000} 
                     className={styles.image}
-                    src="dylan.png"
+                    src="/dylan.png"
                     alt=""
                 />
                 <div className={styles.text}>

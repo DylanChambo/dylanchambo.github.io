@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className={styles.snap}>
       <Head>
-        <title>Dylan's Portolio</title>
+        <title>Dylan&apos;s Portolio</title>
         <meta name="description" content="Dylan Chamberlain's Portfolio website" />
         <meta name="author" content="Dylan Chamberlain" />
         <link rel="icon" href="/favicon.ico" />
