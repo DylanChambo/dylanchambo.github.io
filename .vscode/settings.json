@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "head",
         "hero",
-        "about"
+        "about",
+        "work-experience"
     ]
 }

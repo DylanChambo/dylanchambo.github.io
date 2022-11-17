@@ -1,3 +1,5 @@
+@import "./shared.module.scss";
+
 .container {
     height: 100vh;
     display: flex;
@@ -9,16 +11,6 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-}
-
-.title {
-    position: absolute;
-    top: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.7rem;
-    color: gray;
-    font-weight: 500;
-    font-size: 1.4rem;
 }
 
 .image {
