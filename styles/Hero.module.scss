@@ -1,6 +1,6 @@
 .container {
     top: 0;
-    height: 85vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,22 +21,28 @@
 }
 
 .text {
-    margin-top: 20rem;
+    position: relative;
+    height: 100vh;
+    top: 65%;
     z-index: 20;
+}
+
+.typewriter {
+    font-size: 0.95rem;
 }
 
 .subheader {
     text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     line-height: 1.25rem;
     color: gray;
     font-weight: 500;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.25rem;
 }
 
 .button {
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.7rem;
     border: 1px solid;
     border-radius: 9999px;
     border-color: transparent;
@@ -53,6 +59,26 @@
     opacity: 0.6;
 }
 
-.spacer {
-    height: 15vh;
+@media screen and (min-width: 30rem) {
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .typewriter {
+        font-size: 1.5rem;
+    }
+
+    .subheader {
+        font-size: 0.875rem;
+        letter-spacing: 0.5rem;
+    }
+}
+
+@media screen and (min-height: 48rem) {
+    .text { 
+        top: 62%;
+    }
 }

@@ -28,3 +28,9 @@ a {
     background: $backgroundColor;
   }
 }
+
+@media screen and (min-width: 2000px) {
+  html {
+      font-size: 30px;
+  }
+}
