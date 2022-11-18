@@ -53,7 +53,6 @@ export default function Hero({}: Props) {
                     </div>
                 </div>
             </div>
-            <div className={styles.spacer}></div>
         </div>
     )
 }
