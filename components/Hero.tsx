@@ -32,7 +32,7 @@ export default function Hero({}: Props) {
                 />
                 <div className={styles.text}>
                     <h2 className={styles.subheader}>Software & Computer Engineer</h2>
-                    <h1>
+                    <h1 className={styles.typewriter}>
                         <span>{text}</span>
                         <Cursor cursorColor="#F7AB0A"/>
                     </h1>

@@ -7,24 +7,24 @@
     flex-direction: column;
     text-align: center;
     max-width: 75rem;
-    padding: 0 2.5rem;
+    padding: 0 1rem;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
 
 .image {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     flex-shrink: 0;
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: 9999px;
     object-fit: cover;
 }
 
 .subheader {
-    font-size: 1.8rem;
-    padding-bottom: 1rem;
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem;
 }
 
 .textContainer {
@@ -33,14 +33,22 @@
 }
 
 .text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: justify;
+}
+
+@media screen and (min-width: 80rem) {
+    .image {
+        width: 30rem;
+        height: 30rem;
+    }
 }
 
 @media screen and (min-width: 48rem) {
     .container {
         flex-direction: row;
         text-align: left;
+        padding: 2.5rem;
     }
 
     .image {
@@ -53,11 +61,27 @@
     .textContainer {
         padding: 1.5rem;
     }
-}
 
-@media screen and (min-width: 80rem) {
-    .image {
-        width: 30rem;
-        height: 30rem;
+    .subheader {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
     }
 }
+
+@media screen and (min-width: 26rem) {
+    
+
+    .image {
+        margin-bottom: 1rem;
+        flex-shrink: 0;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 9999px;
+        object-fit: cover;
+    }
+
+    .text {
+        size: 1rem;
+    }
+}
+
