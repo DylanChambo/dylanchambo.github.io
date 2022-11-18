@@ -19,6 +19,15 @@ a {
   margin: 0;
 }
 
+html {
+  color-scheme: dark;
+}
+
+body {
+  color: $textColor;
+  background: $backgroundColor;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
