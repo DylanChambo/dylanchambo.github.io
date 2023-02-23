@@ -1,0 +1,8 @@
+{
+    "conventionalCommits.scopes": [
+        "head",
+        "hero",
+        "about",
+        "work-experience"
+    ]
+}

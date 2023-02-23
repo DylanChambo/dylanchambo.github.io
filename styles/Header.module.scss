@@ -1,12 +1,18 @@
 $fgColor: gray;
 $bgColor: transparent;
 
-.header {
+.container {
+    position: fixed;
     top: 0;
+    width: 100vw;
+}
+
+.header {
+    
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    position: sticky;
+    
     max-width: 80rem;
     margin: 0 auto;
     z-index: 20;

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Header() {
   return (
+    <span className={styles.container}>
     <header className={styles.header}>
       <motion.div 
         initial = {{
@@ -57,5 +58,6 @@ export default function Header() {
         <p className={styles.text}>Get In Touch</p>
       </motion.div>
     </header>
+    </span>
   )
 }
