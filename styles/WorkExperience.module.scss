@@ -1,21 +1,31 @@
 @import "./shared.module.scss";
 
 .container {
-    height: 95vh;
+    height: 100vh;
     display: flex;
     position: relative;
     overflow: hidden;
     flex-direction: column;
     text-align: left;
     max-width: 100%;
-    padding: 0 1rem;
+    padding: 1rem;
     justify-content: space-evenly;
-    margin: 2.5vh auto;
+
     align-items: center;
 }
 
-@media screen and (min-width: 48rem) {
-    .container {
-        flex-direction: row;
+.cardbox {
+    height: calc(100% - 6rem);
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem;
+    
+    scroll-snap-type: x var(--tw-scroll-snap-strictness);
+    --tw-scroll-snap-strictness: mandatory;
+    > * {
+        margin-left: 1.25rem;
     }
 }
+
