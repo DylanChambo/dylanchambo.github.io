@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/WorkExperience.module.scss';
 import { motion } from 'framer-motion';
+import ExperienceCard from './ExperienceCard';
 
 type Props = {}
 
@@ -14,7 +15,10 @@ export default function WorkExperience({}: Props) {
     >
         <h3 className={styles.title}>Experience</h3>
         <div className={styles.cardbox}>
-
+          <ExperienceCard />
+          <ExperienceCard />
+          <ExperienceCard />
+          <ExperienceCard />
         </div>
     </motion.div>
   );
