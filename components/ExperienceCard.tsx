@@ -9,16 +9,18 @@ export default function ExperienceCard({}: Props) {
     <article className={styles.container}>
         <motion.img 
             initial={{
-                y: -200,
+                y: -100,
                 opacity: 0
             }}
-            transition={{duration: 1.2 }}
+            transition={{duration: 1 }}
             whileInView={{
                 y: 0,
                 opacity: 1
             }}
             viewport={{once: true}}
-            className={styles.image} src="https://mms.businesswire.com/media/20171101005965/en/621854/5/vista_highres.jpg"
+            className={styles.image} 
+            src="https://mms.businesswire.com/media/20171101005965/en/621854/5/vista_highres.jpg"
+            alt=""
         />
 
         <div>
