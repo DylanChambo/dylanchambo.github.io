@@ -5,6 +5,7 @@ $bgColor: transparent;
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 20;
 }
 
 .header {
@@ -15,7 +16,7 @@ $bgColor: transparent;
     
     max-width: 80rem;
     margin: 0 auto;
-    z-index: 20;
+    
     padding: 0.1rem 0.7rem;
 }
 
