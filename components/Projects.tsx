@@ -17,7 +17,7 @@ export default function Projects({}: Props) {
 
             <div className={styles.projects}>
                 {projects.map((project, i) => (
-                    <div className={styles.project}>
+                    <div key={i} className={styles.project}>
                         <motion.img
                             initial={{
                                 y: -100,
@@ -36,7 +36,7 @@ export default function Projects({}: Props) {
                             alt=""
                         />
                         <div className={styles.textarea}>
-                            <h4 className={styles.projectName}>Project {i+1} of {projects.length}: Google clone</h4>
+                            <h4 className={styles.projectName}>Project {project} of {projects.length}: Google clone</h4>
                             <p className={styles.projectSummary}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas viverra malesuada bibendum.
                                 Nulla tristique id turpis eu mollis. In eleifend justo eu egestas maximus. Sed interdum eros aliquam felis pulvinar,
