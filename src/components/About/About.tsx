@@ -1,19 +1,13 @@
 import { motion } from 'framer-motion';
 import React from 'react'
+import Section from '../Section/Section';
 import styles from './About.module.scss';
 
 type Props = {}
 
 export default function About({}: Props) {
   return (
-    <motion.div 
-        initial = {{ opacity: 0 }}
-        whileInView = {{ opacity: 1 }}
-        transition = {{ duration: 1.5 }}
-        className={styles.container}
-    >
-        <h3 className={styles.title}>About</h3>
-
+    <Section title="About" id="about">
         <motion.img 
             className={styles.image}
             src = "dylan.png" 
@@ -46,6 +40,6 @@ export default function About({}: Props) {
                 dui id venenatis viverra, ipsum nulla rutrum odio, vel sollicitudin massa risus id lorem.
             </p>
         </div>
-    </motion.div>
+    </Section>
   )
 }

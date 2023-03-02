@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react'
+import Section from '../Section/Section';
 import styles from './Projects.module.scss';
 
 type Props = {}
@@ -7,13 +8,7 @@ type Props = {}
 export default function Projects({}: Props) {
     const projects = [1, 2, 3, 4, 5]
     return (
-        <motion.div
-            initial = {{ opacity: 0 }}
-            whileInView = {{ opacity: 1 }}
-            transition = {{ duration: 1.5 }}
-            
-            className={styles.container}>
-            <h3 className={styles.title}>Projects</h3>
+       <Section title="Projects" id="projects">
 
             <div className={styles.projects}>
                 {projects.map((project, i) => (
@@ -50,6 +45,6 @@ export default function Projects({}: Props) {
             </div>
 
             <div className={styles.stripe}/>
-        </motion.div>
+        </Section>
     )
 }

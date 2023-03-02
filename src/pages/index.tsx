@@ -18,36 +18,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Header */}
       <Header />
+      
+      <Hero />
+      
+      <About />
 
-      {/* Hero */}
-      <section className={styles.snap} id="hero">
-        <Hero />
-      </section>
+      <WorkExperience />
 
-      {/* About */}
-      <section className={styles.snap}>
-        <About />
-      </section>
+      <Skills />
 
-      {/* TODO: Experience */}
-      <section className={styles.snap} id="experience">
-        <WorkExperience />
-      </section>
-
-      {/* TODO: Skills */}
-      <section className={styles.snap} id="skills">
-        <Skills />
-      </section>
-
-      {/* TODO: Projects */}
-      <section className={styles.snap} id="projects">
-        <Projects />
-      </section>
+      <Projects />
       {/* TODO: Contact Me */}
-      <Section title="Contact">
-      </Section>
     </div>
   )
 }
