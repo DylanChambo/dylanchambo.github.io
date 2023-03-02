@@ -3,6 +3,7 @@ import About from '../components/About/About'
 import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
+import Section from '../components/Section/Section'
 import Skills from '../components/Skills/Skills'
 import WorkExperience from '../components/WorkExperience/WorkExperience'
 import styles from '../styles/Home.module.scss'
@@ -26,7 +27,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className={styles.snap} id="about">
+      <section className={styles.snap}>
         <About />
       </section>
 
@@ -45,7 +46,7 @@ export default function Home() {
         <Projects />
       </section>
       {/* TODO: Contact Me */}
-
+      < Section title="Contact" />
     </div>
   )
 }

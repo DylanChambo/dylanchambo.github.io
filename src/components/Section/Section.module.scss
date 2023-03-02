@@ -1,0 +1,35 @@
+.section {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: left;
+    max-width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+.title {
+    margin: 3rem 0 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.7rem;
+    color: gray;
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+}
