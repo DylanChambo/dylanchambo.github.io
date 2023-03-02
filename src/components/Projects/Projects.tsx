@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import styles from '../styles/Projects.module.scss';
+import styles from './Projects.module.scss';
 
 type Props = {}
 

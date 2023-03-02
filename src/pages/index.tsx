@@ -1,15 +1,15 @@
 import Head from 'next/head'
-import About from '../components/About'
-import Header from '../components/Header'
-import Hero from '../components/Hero'
-import Projects from '../components/Projects'
-import { Skills } from '../components/Skills'
-import WorkExperience from '../components/WorkExperience'
+import About from '../components/About/About'
+import Header from '../components/Header/Header'
+import Hero from '../components/Hero/Hero'
+import Projects from '../components/Projects/Projects'
+import Skills from '../components/Skills/Skills'
+import WorkExperience from '../components/WorkExperience/WorkExperience'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <div className={styles.snap}>
+    <div className={styles.snapBox}>
       <Head>
         <title>Dylan&apos;s Portolio</title>
         <meta name="description" content="Dylan Chamberlain's Portfolio website" />
@@ -21,27 +21,27 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <section className={styles.snapStart} id="hero">
+      <section className={styles.snap} id="hero">
         <Hero />
       </section>
 
       {/* About */}
-      <section className={styles.snapCenter} id="about">
+      <section className={styles.snap} id="about">
         <About />
       </section>
 
       {/* TODO: Experience */}
-      <section className={styles.snapCenter} id="experience">
+      <section className={styles.snap} id="experience">
         <WorkExperience />
       </section>
 
       {/* TODO: Skills */}
-      <section className={styles.snapCenter} id="skills">
+      <section className={styles.snap} id="skills">
         <Skills />
       </section>
 
       {/* TODO: Projects */}
-      <section className={styles.snapCenter} id="projects">
+      <section className={styles.snap} id="projects">
         <Projects />
       </section>
       {/* TODO: Contact Me */}

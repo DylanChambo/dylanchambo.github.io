@@ -1,4 +1,4 @@
-.snap {
+.snapBox {
     scroll-snap-type: y var(--tw-scroll-snap-strictness);
     --tw-scroll-snap-strictness: mandatory;
     z-index: 0;
@@ -7,10 +7,6 @@
     height: 100vh;
 }
 
-.snapCenter {
+.snap {
     scroll-snap-align: center;
-}
-
-.snapStart {
-    scroll-snap-align: start;
 }

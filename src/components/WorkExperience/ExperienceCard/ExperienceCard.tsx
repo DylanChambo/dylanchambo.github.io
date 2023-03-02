@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/ExperienceCard.module.scss';
+import styles from './ExperienceCard.module.scss';
 import {motion} from 'framer-motion';
 
 type Props = {}

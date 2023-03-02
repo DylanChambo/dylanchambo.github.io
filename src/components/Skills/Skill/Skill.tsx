@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import styles from '../styles/Skill.module.scss';
+import styles from './Skill.module.scss';
 
 type Props = {
     directionLeft?: boolean;

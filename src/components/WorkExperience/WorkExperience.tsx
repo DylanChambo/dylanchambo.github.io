@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../styles/WorkExperience.module.scss';
+import styles from './WorkExperience.module.scss';
 import { motion } from 'framer-motion';
-import ExperienceCard from './ExperienceCard';
+import ExperienceCard from '../ExperienceCard/ExperienceCard';
 
 type Props = {}
 

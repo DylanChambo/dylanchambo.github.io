@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import styles from '../styles/Skills.module.scss';
-import Skill from './Skill';
+import styles from './Skills.module.scss';
+import Skill from '../Skill/Skill';
 
 type Props = {}
 
-export function Skills({}: Props) {
+export default function Skills({}: Props) {
   return (
     <motion.div 
         initial = {{ opacity: 0 }}
