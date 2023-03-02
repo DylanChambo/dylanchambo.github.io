@@ -46,7 +46,8 @@ export default function Home() {
         <Projects />
       </section>
       {/* TODO: Contact Me */}
-      < Section title="Contact" />
+      <Section title="Contact">
+      </Section>
     </div>
   )
 }

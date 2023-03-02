@@ -1,16 +1,19 @@
 import React from 'react'
 import styles from './Section.module.scss';
 
-type Props = { 
+type Props = {
+    children?: React.ReactNode;
     title?: string,
     id?: string
 }
 
-export default function Section({ title,id }: Props) {
+export default function Section({ title, id, children }: Props) {
   return (
     <section className={styles.section} id={id}>
         <Title title={title} />
-        <div className={styles.container}></div>
+        <div className={styles.container}>
+            {children}
+        </div>
     </section>
   )
 }
