@@ -5,7 +5,7 @@
 
 .image {
     border-radius: 9999px;
-    border: 1px solid gray;
+    border: 1px solid var(--heading-color);
     object-fit: cover;
     height: 6rem;
     width: 6rem;
@@ -30,7 +30,7 @@
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
-    background: white;
+    background: var(--text-color);
 }
 
 .container:hover {
@@ -41,7 +41,7 @@
 .profieciency {
     font-size: 1.875rem;
     font-weight: bold;
-    color: black;
+    color: var(--background);
 }
 
 @media screen and (min-width: 48rem) {

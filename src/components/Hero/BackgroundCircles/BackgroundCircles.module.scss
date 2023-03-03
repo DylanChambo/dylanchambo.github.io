@@ -7,7 +7,7 @@
 
 .pingCircle {
     position: absolute;
-    border: 1px solid #1C1C1C;
+    border: 1px solid var(--accent-secondary);
     border-radius: 9999px;
     height: 12rem;
     width: 12rem;
@@ -23,7 +23,7 @@
 
 .pulseCircle {
     position: absolute;
-    border: 1px solid #F7AB0A;
+    border: 1px solid var(--accent-color);
     border-radius: 9999px;
     height: 30rem;
     width: 30rem;

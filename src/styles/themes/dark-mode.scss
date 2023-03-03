@@ -8,7 +8,7 @@ $_background_secondary: #202020;
 $_text_color: #fff;
 $_heading_color: gray;
 $_accent_color: #F7AB0A;
-
+$_accent_secondary: #1C1C1C;
 
 @use 'theme-map';
 
@@ -18,4 +18,5 @@ $theme: theme-map.generate-map(
         $_text_color,
         $_heading_color,
         $_accent_color,
+        $_accent_secondary
 	);

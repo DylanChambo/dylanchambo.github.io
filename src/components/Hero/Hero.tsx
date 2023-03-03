@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import BackgroundCircles from "../BackgroundCircles/BackgroundCircles";
-import styles from "./Hero.module.scss";
+import BackgroundCircles from "./BackgroundCircles/BackgroundCircles";
+import styles, { accent } from "./Hero.module.scss";
 import Image from "next/image";
 import Section from "../Section/Section";
 
@@ -34,7 +34,7 @@ export default function Hero({}: Props) {
                 <h2 className={styles.subheader}>Software & Computer Engineer</h2>
                 <h1 className={styles.typewriter}>
                     <span>{text}</span>
-                    <Cursor cursorColor="#F7AB0A"/>
+                    <Cursor cursorColor={accent}/>
                 </h1>
 
                 <div>

@@ -1,18 +1,3 @@
-@import "../../styles/shared.module.scss";
-
-.container {
-    height: 95vh;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    text-align: center;
-    max-width: 75rem;
-    padding: 0 1rem;
-    justify-content: center;
-    align-items: center;
-    margin: 2.5vh auto;
-}
-
 .image {
     margin-bottom: 0rem;
     flex-shrink: 0;

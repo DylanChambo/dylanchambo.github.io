@@ -8,6 +8,7 @@ $_background_secondary: #ddd;
 $_text_color: #000;
 $_heading_color: #222;
 $_accent_color: #F7AB0A;
+$_accent_secondary: #bbb;
 
 
 @use 'theme-map';
@@ -18,4 +19,5 @@ $theme: theme-map.generate-map(
         $_text_color,
         $_heading_color,
         $_accent_color,
+        $_accent_secondary
 	);

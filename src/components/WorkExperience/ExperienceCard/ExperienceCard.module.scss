@@ -5,7 +5,7 @@
     flex-shrink: 0;
     width: 500px;
     scroll-snap-align: center;
-    background-color: #202020;
+    background-color: var(--background-secondary);
     padding: 1.5rem;
     opacity: 0.5;
     cursor: pointer;
@@ -58,6 +58,6 @@
 }
 
 .time {
-    color: gray;
+    color: var(--heading-color);
     text-transform: uppercase;
 }

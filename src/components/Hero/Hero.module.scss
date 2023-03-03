@@ -1,3 +1,5 @@
+$accent: var(--accent-color);
+
 .container {
     top: 0;
     height: 100vh;
@@ -35,7 +37,7 @@
     text-transform: uppercase;
     font-size: 0.7rem;
     line-height: 1.25rem;
-    color: gray;
+    color: var(--heading-color);
     font-weight: 500;
     letter-spacing: 0.25rem;
 }
@@ -49,14 +51,18 @@
     background-color: transparent;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    color: gray;
+    color: var(--heading-color);
     font-weight: 500;
 }
 
 .button:hover {
-    border-color: #F7AB0A;
-    color: #F7AB0A;
+    border-color: $accent;
+    color: $accent;
     opacity: 0.6;
+}
+
+:export {
+    accent: $accent;
 }
 
 @media screen and (min-width: 30rem) {
@@ -82,3 +88,4 @@
         top: 62%;
     }
 }
+

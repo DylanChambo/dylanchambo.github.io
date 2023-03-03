@@ -8,7 +8,7 @@ type Props = {}
 export default function Projects({}: Props) {
     const projects = [1, 2, 3, 4, 5]
     return (
-       <Section title="Projects" id="projects">
+       <Section title="Projects" id="projects" background={true}>
 
             <div className={styles.projects}>
                 {projects.map((project, i) => (
@@ -44,7 +44,7 @@ export default function Projects({}: Props) {
                 ))}
             </div>
 
-            <div className={styles.stripe}/>
+            
         </Section>
     )
 }
