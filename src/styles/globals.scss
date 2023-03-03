@@ -1,3 +1,5 @@
+@use '_theme';
+
 $backgroundColor: #141414;
 $textColor: white;
 
@@ -19,24 +21,11 @@ a {
   margin: 0;
 }
 
-html {
-  color-scheme: dark;
-}
-
 body {
-  color: $textColor;
-  background: $backgroundColor;
+  color: var(--text-color);
+  background: var(--background);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: $textColor;
-    background: $backgroundColor;
-  }
-}
 
 @media screen and (min-width: 2000px) {
   html {

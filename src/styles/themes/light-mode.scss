@@ -1,0 +1,21 @@
+/* 
+ * Light Mode Theme
+ */
+
+// Main palette
+$_background: #fff;
+$_background_secondary: #ddd;
+$_text_color: #000;
+$_heading_color: #222;
+$_accent_color: #F7AB0A;
+
+
+@use 'theme-map';
+
+$theme: theme-map.generate-map(
+        $_background,
+        $_background_secondary,
+        $_text_color,
+        $_heading_color,
+        $_accent_color,
+	);
