@@ -1,8 +1,5 @@
 @use '_theme';
 
-$backgroundColor: #141414;
-$textColor: white;
-
 html,
 body {
   padding: 0;
@@ -22,6 +19,7 @@ a {
 }
 
 body {
+  transition: background-color 0.25s, color 0.25s;
   color: var(--text-color);
   background: var(--background);
 }

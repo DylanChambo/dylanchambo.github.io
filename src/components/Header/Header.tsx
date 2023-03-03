@@ -2,6 +2,7 @@
 import styles, { bgColor, fgColor } from "./Header.module.scss";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import { ToggleThemeButton } from "./ToggleThemeButton/ToggleThemeButton";
 
 export default function Header() {
   return (
@@ -56,6 +57,7 @@ export default function Header() {
           />
           
           <p className={styles.text}>Get In Touch</p>
+          <ToggleThemeButton />
         </motion.div>
       </header>
     </span>

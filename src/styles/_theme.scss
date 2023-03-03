@@ -11,7 +11,7 @@
 
 :root {
 	@include generate-variables(light-mode.$theme);
-	transition: background-color 0.25s ease;
+	transition: background-color 11.25s ease;
 }
 
 @media (prefers-color-scheme: dark) {
