@@ -8,25 +8,27 @@ type Props = {
 
 export default function Skill({ directionLeft }: Props) {
   return (
-    <div className={styles.skill}>
-        <motion.img 
-            initial={{
-                x: directionLeft ? -200 : 200,
-                opacity: 0
-            }}
-            transition={{
-                duration: 1
-            }}
-            whileInView={{
-                x: 0,
-                opacity: 1
-            }}
+    <motion.div 
+        initial={{
+            x: directionLeft ? -200 : 200,
+            opacity: 0
+        }}
+        transition={{
+            duration: 1
+        }}
+        whileInView={{
+            x: 0,
+            opacity: 1
+        }}
+        className={styles.skill}>
+        <img
             className={styles.image}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
+            alt=""
         />
         <div className={styles.container}>
             <p className={styles.profieciency}>85%</p>
         </div>
-    </div>
+    </motion.div>
   )
 }
