@@ -1,0 +1,17 @@
+@function generate-map(
+	$_background,
+	$_background_secondary,
+	$_text_color,
+	$_heading_color,
+	$_accent_color,
+	$_accent_secondary
+) {
+	@return ( // Main palette
+		'background': $_background,
+		'background-secondary': $_background_secondary,
+		'text-color': $_text_color,
+		'heading-color': $_heading_color,
+		'accent-color': $_accent_color,
+		'accent-secondary': $_accent_secondary
+	);
+}

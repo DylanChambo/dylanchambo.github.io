@@ -1,0 +1,55 @@
+.skill {
+    position: relative;
+    display: flex;
+}
+
+.image {
+    border-radius: 9999px;
+    border: 1px solid var(--heading-color);
+    object-fit: cover;
+    height: 6rem;
+    width: 6rem;
+    transition-property: filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.image:hover {
+    filter: grayscale(100%); 
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 9999px;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    background: var(--text-color);
+}
+
+.container:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.profieciency {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: var(--background);
+}
+
+@media screen and (min-width: 48rem) {
+    .image {
+        height: 7.5rem;
+        width: 7.5rem;
+    }
+    .profieciency {
+        font-size: 2.25rem;
+    }
+}
