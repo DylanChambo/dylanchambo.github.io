@@ -1,0 +1,16 @@
+.header {
+    position: absolute;
+    top: 7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding-left: 0.2rem; 
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+}

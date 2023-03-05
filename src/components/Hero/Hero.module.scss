@@ -1,0 +1,91 @@
+$accent: var(--accent-color);
+
+.container {
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.image {
+    position: absolute;
+    border-radius: 9999px;
+    height: 12rem;
+    width: 12rem;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.text {
+    position: relative;
+    height: 100vh;
+    top: 65%;
+    z-index: 20;
+}
+
+.typewriter {
+    font-size: 0.95rem;
+}
+
+.subheader {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+    color: var(--heading-color);
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+}
+
+.button {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.7rem;
+    border: 1px solid;
+    border-radius: 9999px;
+    border-color: transparent;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--heading-color);
+    font-weight: 500;
+}
+
+.button:hover {
+    border-color: $accent;
+    color: $accent;
+    opacity: 0.6;
+}
+
+:export {
+    accent: $accent;
+}
+
+@media screen and (min-width: 30rem) {
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .typewriter {
+        font-size: 1.5rem;
+    }
+
+    .subheader {
+        font-size: 0.875rem;
+        letter-spacing: 0.5rem;
+    }
+}
+
+@media screen and (min-height: 48rem) {
+    .text { 
+        top: 62%;
+    }
+}
+

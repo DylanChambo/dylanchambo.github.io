@@ -1,0 +1,14 @@
+.cardbox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem;
+    
+    scroll-snap-type: x var(--tw-scroll-snap-strictness);
+    --tw-scroll-snap-strictness: mandatory;
+    > * {
+        margin: 0 0.6125rem;
+    }
+}
+
