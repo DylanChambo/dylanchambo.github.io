@@ -20,9 +20,9 @@ export default function Home() {
       </Head>
 
       <Header />
-      
+
       <Hero />
-      
+
       <About />
 
       <WorkExperience />
@@ -31,7 +31,6 @@ export default function Home() {
 
       <Projects />
 
-      {/* TODO: Contact Me */}
       <ContactMe />
     </div>
   )

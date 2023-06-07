@@ -19,7 +19,7 @@ export default function ContactMe({ }: Props) {
     window.location.href = `mailto:dylan.chambo@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}.%0A${formData.message}`;
   };
   return (
-    <Section title="Contact">
+    <Section title="Contact" id='contact'>
       <h4 className={styles.header}>
         I have got just what you need.{" "}
         <span className={styles.underlined}>Lets Talk.</span>
