@@ -79,7 +79,7 @@
     outline: none;
     border: 0;
     padding: 1rem 1.5rem;
-    background-color: rgba(#888, 0.1);
+    background-color: var(--background-secondary);
     border-radius: 0.25rem;
     border-bottom: 1px solid var(--background);
     color: var(--heading-color);

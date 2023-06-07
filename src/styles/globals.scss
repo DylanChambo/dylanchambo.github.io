@@ -34,3 +34,18 @@ body {
     font-size: 30px;
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color-50);
+}
