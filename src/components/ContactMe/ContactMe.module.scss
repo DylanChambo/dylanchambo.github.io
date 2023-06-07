@@ -1,0 +1,110 @@
+.header {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.underlined {
+    text-decoration-line: underline;
+    text-decoration-color: var(--accent-color-50);
+}
+
+.contactContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    *:not(:first-child) {
+        margin-left: 1.25rem;
+    }
+}
+
+.contacts {
+    * {
+        margin-top: 1.5rem;
+    }
+}
+
+.contactItem {
+    height: 2rem;
+    width: 2rem;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    color: var(--accent-color);
+}
+
+.contactText {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+
+    * {
+        margin-top: 0.5rem;
+    }
+}
+
+.formTop {
+    display: flex;
+    flex-direction: row;
+
+    *:not(:first-child) {
+        margin-left: 0.5rem;
+    }
+}
+
+.button {
+    background-color: var(--accent-color);
+    border: 0;
+    padding: 1.25rem 2.5rem;
+    border-radius: 0.5rem;
+    color: var(--background);
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.button:hover {
+    opacity: 0.75;
+}
+
+.inputBox {
+    outline: none;
+    border: 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba(#888, 0.1);
+    border-radius: 0.25rem;
+    border-bottom: 1px solid var(--background);
+    color: var(--heading-color);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.inputBox:focus {
+    border-bottom: 1px solid var(--accent-color-50);
+    color: var(--accent-color-50);
+}
+
+.inputBox:hover {
+    border-bottom: 1px solid var(--accent-color-50);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+}

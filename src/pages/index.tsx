@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import About from '../components/About/About'
+import ContactMe from '../components/ContactMe/ContactMe'
 import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
@@ -29,7 +30,9 @@ export default function Home() {
       <Skills />
 
       <Projects />
+
       {/* TODO: Contact Me */}
+      <ContactMe />
     </div>
   )
 }
