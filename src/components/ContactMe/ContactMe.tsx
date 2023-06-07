@@ -21,8 +21,7 @@ export default function ContactMe({ }: Props) {
   return (
     <Section title="Contact" id='contact'>
       <h4 className={styles.header}>
-        I have got just what you need.{" "}
-        <span className={styles.underlined}>Lets Talk.</span>
+        <span className={styles.underlined}>Let's Talk.</span>
       </h4>
       <div className={styles.contacts}>
         <div className={styles.contactContainer}>
