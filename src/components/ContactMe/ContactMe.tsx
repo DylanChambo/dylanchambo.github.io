@@ -31,12 +31,12 @@ export default function ContactMe({ }: Props) {
 
       <form className={styles.form}>
         <div className={styles.formTop}>
-          <input className={styles.inputBox} type="text" />
-          <input className={styles.inputBox} type="text" />
+          <input className={styles.inputBox} type="text" placeholder='Name' />
+          <input className={styles.inputBox} type="email" placeholder='Email' />
         </div>
-        <input className={styles.inputBox} type="text" />
-        <textarea className={styles.inputBox} />
-        <button className={styles.button}>Submit</button>
+        <input className={styles.inputBox} type="text" placeholder='Subject' />
+        <textarea placeholder='Message' className={styles.inputBox} />
+        <button type="submit" className={styles.button}>Submit</button>
       </form>
 
     </Section>
