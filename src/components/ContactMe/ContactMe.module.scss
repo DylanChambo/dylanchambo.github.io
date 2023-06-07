@@ -1,15 +1,51 @@
-@import "./shared.module.scss";
+.header {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
 
-.container {
-    height: 100vh;
+.underlined {
+    text-decoration-line: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 0.1rem;
+}
+
+.contactContainer {
     display: flex;
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-    text-align: left;
-    max-width: 100%;
-    padding: 1rem;
-    justify-content: space-evenly;
-
     align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    * {
+        margin-left: 1.25rem;
+    }
+}
+
+.contacts {
+    * {
+        margin-top: 2rem;
+    }
+}
+
+.contactItem {
+    height: 2rem;
+    width: 2rem;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    color: var(--accent-color);
+}
+
+.contactText {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
 }
