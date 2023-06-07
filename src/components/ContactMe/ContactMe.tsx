@@ -2,10 +2,21 @@ import { IoCallSharp, IoMailSharp, IoLocationSharp } from 'react-icons/io5';
 import styles from './ContactMe.module.scss';
 import React from 'react'
 import Section from '../Section/Section';
+import { useForm, SubmitHandler } from "react-hook-form";
 
 type Props = {}
 
+type Inputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 export default function ContactMe({ }: Props) {
+  const { register, handleSubmit } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = formData => console.log(formData);
+
   return (
     <Section title="Contact">
       <h4 className={styles.header}>
@@ -29,13 +40,13 @@ export default function ContactMe({ }: Props) {
         </div>
       </div>
 
-      <form className={styles.form}>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <div className={styles.formTop}>
-          <input className={styles.inputBox} type="text" placeholder='Name' />
-          <input className={styles.inputBox} type="email" placeholder='Email' />
+          <input {...register('name')} className={styles.inputBox} type="text" placeholder='Name' />
+          <input {...register('email')} className={styles.inputBox} type="email" placeholder='Email' />
         </div>
-        <input className={styles.inputBox} type="text" placeholder='Subject' />
-        <textarea placeholder='Message' className={styles.inputBox} />
+        <input {...register('subject')} className={styles.inputBox} type="text" placeholder='Subject' />
+        <textarea {...register('message')} placeholder='Message' className={styles.inputBox} />
         <button type="submit" className={styles.button}>Submit</button>
       </form>
 
