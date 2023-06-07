@@ -13,11 +13,9 @@ $_accent_secondary: #bbb;
 
 @use 'theme-map';
 
-$theme: theme-map.generate-map(
-        $_background,
-        $_background_secondary,
-        $_text_color,
-        $_heading_color,
-        $_accent_color,
-        $_accent_secondary
-	);
+$theme: theme-map.generate-map($_background,
+                $_background_secondary,
+                $_text_color,
+                $_heading_color,
+                $_accent_color,
+                $_accent_secondary);

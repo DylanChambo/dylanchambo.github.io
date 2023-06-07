@@ -3,20 +3,18 @@
  */
 
 // Main palette
-$_background: #141414;
-$_background_secondary: #202020;
-$_text_color: #fff;
-$_heading_color: gray;
-$_accent_color: #F7AB0A;
-$_accent_secondary: #1C1C1C;
+$_background: rgba(#141414, 1);
+$_background_secondary: rgba(#202020, 1);
+$_text_color: rgba(#fff, 1);
+$_heading_color: rgba(gray, 1);
+$_accent_color: rgba(#F7AB0A, 1);
+$_accent_secondary: rgba(#1C1C1C, 1);
 
 @use 'theme-map';
 
-$theme: theme-map.generate-map(
-        $_background,
-        $_background_secondary,
-        $_text_color,
-        $_heading_color,
-        $_accent_color,
-        $_accent_secondary
-	);
+$theme: theme-map.generate-map($_background,
+                $_background_secondary,
+                $_text_color,
+                $_heading_color,
+                $_accent_color,
+                $_accent_secondary);

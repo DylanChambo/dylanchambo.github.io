@@ -29,6 +29,16 @@ export default function ContactMe({ }: Props) {
         </div>
       </div>
 
+      <form className={styles.form}>
+        <div className={styles.formTop}>
+          <input className={styles.inputBox} type="text" />
+          <input className={styles.inputBox} type="text" />
+        </div>
+        <input className={styles.inputBox} type="text" />
+        <textarea className={styles.inputBox} />
+        <button className={styles.button}>Submit</button>
+      </form>
+
     </Section>
   )
 }
