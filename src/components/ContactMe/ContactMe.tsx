@@ -15,8 +15,9 @@ type Inputs = {
 
 export default function ContactMe({ }: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = formData => console.log(formData);
-
+  const onSubmit: SubmitHandler<Inputs> = formData => {
+    window.location.href = `mailto:dylan.chambo@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}.%0A${formData.message}`;
+  };
   return (
     <Section title="Contact">
       <h4 className={styles.header}>
