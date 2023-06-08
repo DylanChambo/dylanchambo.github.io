@@ -51,17 +51,19 @@ export default function Header() {
           transition={{ duration: 1 }}
           className={[styles.email, styles.headerPart].join(' ')}
         >
+
           <SocialIcon
             url="#contact"
             network="email"
             fgColor={fgColor}
             bgColor={bgColor}
           />
-
-
-          <p className={styles.text}>Get In Touch</p>
+          <Link href="#contact">
+            <p className={styles.text}>Get In Touch</p>
+          </Link>
           <ToggleThemeButton />
         </motion.div>
+
       </header>
     </span>
   )
