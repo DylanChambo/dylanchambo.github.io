@@ -1,3 +1,5 @@
+import type { Image } from 'sanity'
+
 export interface PageInfo extends SanityBody {
     _type: "pageInfo";
     address: string;

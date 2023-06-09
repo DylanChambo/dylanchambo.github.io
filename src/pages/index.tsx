@@ -38,7 +38,7 @@ export default function Home({ pageInfo, experiences, skills, projects, socials 
 
       <Header socials={socials} />
 
-      <Hero />
+      <Hero pageInfo={pageInfo} />
 
       <About />
 
