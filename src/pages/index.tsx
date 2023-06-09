@@ -44,9 +44,9 @@ export default function Home({ pageInfo, experiences, skills, projects, socials 
 
       <WorkExperience experiences={experiences} />
 
-      <Skills />
+      <Skills skills={skills} />
 
-      <Projects />
+      <Projects projects={projects} />
 
       <ContactMe />
     </div>
