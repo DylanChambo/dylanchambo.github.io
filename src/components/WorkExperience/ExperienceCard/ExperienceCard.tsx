@@ -1,46 +1,52 @@
 import React from 'react';
 import styles from './ExperienceCard.module.scss';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
+import { Experience } from '../../../models/Experience';
+import { urlForImage } from '../../../../sanity/lib/image';
 
-type Props = {}
+type Props = {
+    experience: Experience
+}
 
-export default function ExperienceCard({}: Props) {
-  return (
-    <article className={styles.container}>
-        <motion.img 
-            initial={{
-                y: -100,
-                opacity: 0
-            }}
-            transition={{duration: 1 }}
-            whileInView={{
-                y: 0,
-                opacity: 1
-            }}
-            viewport={{once: true}}
-            className={styles.image} 
-            src="https://mms.businesswire.com/media/20171101005965/en/621854/5/vista_highres.jpg"
-            alt=""
-        />
+export default function ExperienceCard({ experience }: Props) {
+    return (
+        <article className={styles.container}>
+            <motion.img
+                initial={{
+                    y: -100,
+                    opacity: 0
+                }}
+                transition={{ duration: 1 }}
+                whileInView={{
+                    y: 0,
+                    opacity: 1
+                }}
+                viewport={{ once: true }}
+                className={styles.image}
+                src={urlForImage(experience?.companyImage).url()}
+                alt=""
+            />
 
-        <div>
-            <h4 className={styles.title}>Software Engineering Intern</h4>
-            <p className={styles.company}>Vista</p>
-            <div className={styles.tech_container}>
-                {/* Tech Used */}
-                <img className={styles.tech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"/>
-                <img className={styles.tech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"/>
-                <img className={styles.tech} src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"/>
+            <div>
+                <h4 className={styles.title}>{experience.jobTitle}</h4>
+                <p className={styles.company}>{experience.company}</p>
+                <div className={styles.tech_container}>
+                    {/* Tech Used */}
+                    {experience.technologies.map(tech => (
+                        <img className={styles.tech} src={urlForImage(tech?.image).url()} />
+                    ))}
+                </div>
+                <p className={styles.time}>
+                    {new Date(experience.dateStarted).toDateString()} - {experience.isCurrentlyWorkingHere ? "Present" : new Date(experience.dateEnded).toDateString()}
+                </p>
+                <ul className={styles.list}>
+                    {experience?.points?.map(point => (
+                        <li>{point}</li>
+                    ))}
+                </ul>
             </div>
-            <p className={styles.time}>Nov 28 2022 - Feb 24 2023</p>
-            <ul className={styles.list}>
-                <li>Frontend Development with Angular</li>
-                <li>Backend Development with .NET</li>
-                <li>Worked with a team of interns to develop Vista Media Library from scratch</li>
-            </ul>
-        </div>
-        
-    </article>
-  )
+
+        </article>
+    )
 }
 

@@ -40,9 +40,9 @@ export default function Home({ pageInfo, experiences, skills, projects, socials 
 
       <Hero pageInfo={pageInfo} />
 
-      <About />
+      <About pageInfo={pageInfo} />
 
-      <WorkExperience />
+      <WorkExperience experiences={experiences} />
 
       <Skills />
 
