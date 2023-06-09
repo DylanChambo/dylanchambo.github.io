@@ -4,8 +4,10 @@ import { Project } from "../models/Project";
 import { Skill } from "../models/Skill";
 import { Social } from "../models/Social";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 export const getExperiences = async () => {
-    const res = await fetch(`/api/experience`);
+    const res = await fetch(`${API_URL}/api/experience`);
     const data = await res.json();
     const experiences: Experience[] = data.experiences;
 
@@ -13,7 +15,7 @@ export const getExperiences = async () => {
 }
 
 export const getPageInfo = async () => {
-    const res = await fetch(`/api/page-info`);
+    const res = await fetch(`${API_URL}/api/page-info`);
     const data = await res.json();
     const pageInfo: PageInfo = data.pageInfo;
 
@@ -21,7 +23,7 @@ export const getPageInfo = async () => {
 }
 
 export const getProjects = async () => {
-    const res = await fetch(`/api/projects`);
+    const res = await fetch(`${API_URL}/api/projects`);
     const data = await res.json();
     const projects: Project[] = data.projects;
 
@@ -29,7 +31,7 @@ export const getProjects = async () => {
 }
 
 export const getSkills = async () => {
-    const res = await fetch(`/api/skills`);
+    const res = await fetch(`${API_URL}/api/skills`);
     const data = await res.json();
     const skills: Skill[] = data.skills;
 
@@ -37,7 +39,7 @@ export const getSkills = async () => {
 }
 
 export const getSocials = async () => {
-    const res = await fetch(`/api/socials`);
+    const res = await fetch(`${API_URL}/api/socials`);
     const data = await res.json();
     const socials: Social[] = data.socials;
 

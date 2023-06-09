@@ -23,7 +23,7 @@ type Props = {
   socials: Social[]
 }
 
-export default function Home(props: Props) {
+export default function Home({ pageInfo, experiences, skills, projects, socials }: Props) {
 
   console.log(getSkills());
 
@@ -36,7 +36,7 @@ export default function Home(props: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header socials={socials} />
 
       <Hero />
 
