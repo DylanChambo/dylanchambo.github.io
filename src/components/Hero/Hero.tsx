@@ -6,14 +6,19 @@ import BackgroundCircles from "./BackgroundCircles/BackgroundCircles";
 import styles, { accent } from "./Hero.module.scss";
 import Image from "next/image";
 import Section from "../Section/Section";
+import { PageInfo } from "../../models/PageInfo";
+import { url } from "inspector";
+import { urlForImage } from "../../../sanity/lib/image";
 
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo;
+}
 
-export default function Hero({}: Props) {
+export default function Hero({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
-            "Hi, i'm Dylan Chamberlain!",
+            `Hi, I'm ${pageInfo?.name}!`,
             "I study Engineering at the University of Auckland.",
         ],
         loop: true,
@@ -26,16 +31,16 @@ export default function Hero({}: Props) {
             <BackgroundCircles />
             <Image
                 width={1000}
-                height={1000} 
+                height={1000}
                 className={styles.image}
-                src="/dylan.png"
+                src={urlForImage(pageInfo?.heroImage).url()}
                 alt=""
             />
             <div className={styles.text}>
-                <h2 className={styles.subheader}>Software & Computer Engineer</h2>
+                <h2 className={styles.subheader}>{pageInfo.role}</h2>
                 <h1 className={styles.typewriter}>
                     <span>{text}</span>
-                    <Cursor cursorColor={accent}/>
+                    <Cursor cursorColor={accent} />
                 </h1>
 
                 <div>

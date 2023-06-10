@@ -3,18 +3,20 @@ import styles from './WorkExperience.module.scss';
 import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard/ExperienceCard';
 import Section from '../Section/Section';
+import { Experience } from '../../models/Experience';
 
-type Props = {}
+type Props = {
+  experiences: Experience[]
+}
 
-export default function WorkExperience({}: Props) {
+export default function WorkExperience({ experiences }: Props) {
   return (
     <Section title="Experience" id="experience">
-        <div className={styles.cardbox}>
-          <ExperienceCard />
-          <ExperienceCard />
-          <ExperienceCard />
-          <ExperienceCard />
-        </div>
+      <div className={styles.cardbox}>
+        {experiences.map((experience, id) => (
+          <ExperienceCard key={id} experience={experience} />
+        ))}
+      </div>
     </Section>
   );
 }

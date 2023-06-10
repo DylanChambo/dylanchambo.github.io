@@ -2,13 +2,17 @@ import { motion } from 'framer-motion';
 import React from 'react'
 import Section from '../Section/Section';
 import styles from './Projects.module.scss';
+import { Project } from '../../models/Project';
+import { urlForImage } from '../../../sanity/lib/image';
+import Image from 'next/image';
 
-type Props = {}
+type Props = {
+    projects: Project[]
+}
 
-export default function Projects({}: Props) {
-    const projects = [1, 2, 3, 4, 5]
+export default function Projects({ projects }: Props) {
     return (
-       <Section title="Projects" id="projects" background={true}>
+        <Section title="Projects" id="projects" background={true}>
 
             <div className={styles.projects}>
                 {projects.map((project, i) => (
@@ -25,26 +29,27 @@ export default function Projects({}: Props) {
                                 y: 0,
                                 opacity: 1
                             }}
-                            viewport={{once: true}}
+                            viewport={{ once: true }}
                             className={styles.image}
-                            src="https://media.npr.org/assets/img/2022/12/01/jerrylawson-googlehomepage_custom-b28d7e7d4efdaa0c831c97bdaedb9c189897c37e-s1100-c50.jpg"
-                            alt=""
+                            src={urlForImage(project.image).url()}
+                            alt={project.title}
                         />
                         <div className={styles.textarea}>
-                            <h4 className={styles.projectName}>Project {project} of {projects.length}: Google clone</h4>
+                            <h4 className={styles.projectName}>Project {i + 1} of {projects.length}: {project.title} </h4>
+                            <div className={styles.iconContainer}>
+                                {project?.technologies.map(tech => (
+                                    <img alt="" className={styles.techIcon} key={tech._id} src={urlForImage(tech.image).url()} />
+                                ))}
+                            </div>
                             <p className={styles.projectSummary}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas viverra malesuada bibendum.
-                                Nulla tristique id turpis eu mollis. In eleifend justo eu egestas maximus. Sed interdum eros aliquam felis pulvinar,
-                                vel placerat nisl pharetra. Fusce cursus tortor iaculis mi accumsan ultrices. Phasellus dictum eu elit et pharetra.
-                                Aenean cursus enim sit amet nunc hendrerit sollicitudin. Cras quis dui sit amet ligula elementum semper ut quis dui.
-                                Mauris malesuada, leo vitae sollicitudin ultricies, libero purus aliquet orci, quis pharetra lacus purus in risus.
+                                {project.summary}
                             </p>
                         </div>
                     </div>
                 ))}
             </div>
 
-            
+
         </Section>
     )
 }

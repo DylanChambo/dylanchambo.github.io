@@ -4,8 +4,14 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ToggleThemeButton } from "./ToggleThemeButton/ToggleThemeButton";
+import { Social } from "../../models/Social";
 
-export default function Header() {
+type Props = {
+  socials: Social[]
+};
+
+
+export default function Header({ socials }: Props) {
   return (
     <span className={styles.container}>
       <header className={styles.header}>
@@ -23,17 +29,14 @@ export default function Header() {
           transition={{ duration: 1 }}
           className={[styles.icons, styles.headerPart].join(' ')}
         >
-
-          <SocialIcon
-            url="https://github.com/DylanChambo"
-            fgColor={fgColor}
-            bgColor={bgColor}
-          />
-          <SocialIcon
-            url="https://www.linkedin.com/in/dylanchambo/"
-            fgColor={fgColor}
-            bgColor={bgColor}
-          />
+          {socials.map((social) => (
+            <SocialIcon
+              key={social._id}
+              url={social.url}
+              fgColor={fgColor}
+              bgColor={bgColor}
+            />
+          ))}
 
         </motion.div>
 
