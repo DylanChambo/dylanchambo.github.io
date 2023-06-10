@@ -29,7 +29,7 @@ export default function Home({ pageInfo, experiences, skills, projects, socials 
 
   return (
     <div className={styles.snapBox}>
-      {/* <Head>
+      <Head>
         <title>Dylan&apos;s Portolio</title>
         <meta name="description" content="Dylan Chamberlain's Portfolio website" />
         <meta name="author" content="Dylan Chamberlain" />
@@ -48,26 +48,26 @@ export default function Home({ pageInfo, experiences, skills, projects, socials 
 
       <Projects projects={projects} />
 
-      <ContactMe pageInfo={pageInfo} /> */}
+      <ContactMe pageInfo={pageInfo} />
     </div>
   )
 }
 
-// export const getStaticProps: GetStaticProps<Props> = async () => {
-//   // const pageInfo = await getPageInfo();
-//   // const experiences = await getExperiences();
-//   // const skills = await getSkills();
-//   // const projects = await getProjects();
-//   // const socials = await getSocials();
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo = await getPageInfo();
+  const experiences = await getExperiences();
+  const skills = await getSkills();
+  const projects = await getProjects();
+  const socials = await getSocials();
 
-//   return {
-//     props: {
-//       pageInfo,
-//       experiences,
-//       skills,
-//       socials,
-//       projects
-//     },
-//     revalidate: 60
-//   }
-// }
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      skills,
+      socials,
+      projects
+    },
+    revalidate: 60
+  }
+}
