@@ -25,7 +25,7 @@ export default function SkillComponent({ skill, directionLeft }: Props) {
                 opacity: 1
             }}
             className={styles.skill}>
-            <Image
+            <img
                 className={styles.image}
                 src={urlForImage(skill?.image).url()}
                 alt={skill.title}

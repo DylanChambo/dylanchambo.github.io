@@ -34,7 +34,7 @@ export default function ExperienceCard({ experience }: Props) {
                 <div className={styles.tech_container}>
                     {/* Tech Used */}
                     {experience.technologies.map(tech => (
-                        <Image alt="" className={styles.tech} key={tech._id} src={urlForImage(tech?.image).url()} />
+                        <img alt="" className={styles.tech} key={tech._id} src={urlForImage(tech?.image).url()} />
                     ))}
                 </div>
                 <p className={styles.time}>
