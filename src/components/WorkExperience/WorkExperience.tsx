@@ -13,8 +13,8 @@ export default function WorkExperience({ experiences }: Props) {
   return (
     <Section title="Experience" id="experience">
       <div className={styles.cardbox}>
-        {experiences.map(experience => (
-          <ExperienceCard key={experience._id} experience={experience} />
+        {experiences.map((experience, id) => (
+          <ExperienceCard key={id} experience={experience} />
         ))}
       </div>
     </Section>

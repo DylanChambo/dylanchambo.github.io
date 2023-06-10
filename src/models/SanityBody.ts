@@ -1,4 +1,4 @@
-interface SanityBody {
+export interface SanityBody {
     _createdAt: string;
     _id: string;
     _rev: string;

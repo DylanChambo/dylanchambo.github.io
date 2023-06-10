@@ -4,6 +4,7 @@ import Section from '../Section/Section';
 import styles from './Projects.module.scss';
 import { Project } from '../../models/Project';
 import { urlForImage } from '../../../sanity/lib/image';
+import Image from 'next/image';
 
 type Props = {
     projects: Project[]
@@ -37,7 +38,7 @@ export default function Projects({ projects }: Props) {
                             <h4 className={styles.projectName}>Project {i + 1} of {projects.length}: {project.title} </h4>
                             <div className={styles.iconContainer}>
                                 {project?.technologies.map(tech => (
-                                    <img className={styles.techIcon} key={tech._id} src={urlForImage(tech.image).url()} />
+                                    <Image alt="" className={styles.techIcon} key={tech._id} src={urlForImage(tech.image).url()} />
                                 ))}
                             </div>
                             <p className={styles.projectSummary}>

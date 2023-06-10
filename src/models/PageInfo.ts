@@ -1,4 +1,5 @@
 import type { Image } from 'sanity'
+import { SanityBody } from './SanityBody';
 
 export interface PageInfo extends SanityBody {
     _type: "pageInfo";

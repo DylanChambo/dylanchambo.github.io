@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './Skill.module.scss';
 import { Skill } from '../../../models/Skill';
 import { urlForImage } from '../../../../sanity/lib/image';
+import Image from 'next/image';
 
 type Props = {
     skill: Skill
@@ -24,7 +25,7 @@ export default function SkillComponent({ skill, directionLeft }: Props) {
                 opacity: 1
             }}
             className={styles.skill}>
-            <img
+            <Image
                 className={styles.image}
                 src={urlForImage(skill?.image).url()}
                 alt={skill.title}

@@ -3,6 +3,7 @@ import styles from './ExperienceCard.module.scss';
 import { motion } from 'framer-motion';
 import { Experience } from '../../../models/Experience';
 import { urlForImage } from '../../../../sanity/lib/image';
+import Image from 'next/image';
 
 type Props = {
     experience: Experience
@@ -33,15 +34,15 @@ export default function ExperienceCard({ experience }: Props) {
                 <div className={styles.tech_container}>
                     {/* Tech Used */}
                     {experience.technologies.map(tech => (
-                        <img className={styles.tech} src={urlForImage(tech?.image).url()} />
+                        <Image alt="" className={styles.tech} key={tech._id} src={urlForImage(tech?.image).url()} />
                     ))}
                 </div>
                 <p className={styles.time}>
                     {new Date(experience.dateStarted).toDateString()} - {experience.isCurrentlyWorkingHere ? "Present" : new Date(experience.dateEnded).toDateString()}
                 </p>
                 <ul className={styles.list}>
-                    {experience?.points?.map(point => (
-                        <li>{point}</li>
+                    {experience?.points?.map((point, id) => (
+                        <li key={id}>{point}</li>
                     ))}
                 </ul>
             </div>

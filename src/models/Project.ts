@@ -1,3 +1,4 @@
+import { SanityBody } from "./SanityBody";
 import { Skill } from "./Skill";
 import type { Image } from 'sanity'
 
